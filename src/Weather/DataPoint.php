@@ -41,7 +41,16 @@ class DataPoint
     {
         return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'apparentTemperatureHigh');
     }
-
+    
+    /**
+     * The daytime minimum apparent temperature; only on "daily".
+     *
+     * @return float|null
+     */
+    public function apparentTemperatureMin()
+    {
+        return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'apparentTemperatureMin');
+    }
     /**
      * The UNIX time representing when the daytime high apparent temperature occurs; only on "daily".
      *
@@ -52,6 +61,35 @@ class DataPoint
         return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'apparentTemperatureHighTime');
     }
 
+    /**
+     * The UNIX time representing when the daytime minimum apparent temperature occurs; only on "daily".
+     *
+     * @return int|null
+     */
+    public function apparentTemperatureMinTime()
+    {
+        return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'apparentTemperatureMinTime');
+    }
+
+    /**
+     * The overnight low apparent temperature; only on "daily".
+     *
+     * @return float|null
+     */
+    public function apparentTemperatureMax()
+    {
+        return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'apparentTemperatureMax');
+    }
+
+    /**
+     * The UNIX time representing when the overnight low apparent temperature occurs; only on "daily".
+     *
+     * @return int|null
+     */
+    public function apparentTemperatureMaxTime()
+    {
+        return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'apparentTemperatureMaxTime');
+    }    
     /**
      * The overnight low apparent temperature; only on "daily".
      *
@@ -326,6 +364,45 @@ class DataPoint
     public function temperatureHighTime()
     {
         return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'temperatureHighTime');
+    }
+    /**
+     * The daytime minimum temperature; only on "daily".
+     *
+     * @return float|null
+     */
+    public function temperatureMin()
+    {
+        return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'temperatureMin');
+    }
+
+    /**
+     * The UNIX time representing when the daytime minimum temperature occurs; only on "daily".
+     *
+     * @return int|null
+     */
+    public function temperatureMinTime()
+    {
+        return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'temperatureMinTime');
+    }
+
+    /**
+     * The overnight low temperature; only on "daily".
+     *
+     * @return float|null
+     */
+    public function temperatureMax()
+    {
+        return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'temperatureMax');
+    }
+
+    /**
+     * The UNIX time representing when the overnight low temperature occurs; only on "daily".
+     *
+     * @return int|null
+     */
+    public function temperatureMaxTime()
+    {
+        return \DmitryIvanov\DarkSkyApi\array_get($this->point, 'temperatureMaxTime');
     }
 
     /**
